@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss"
+	],
+	"sourcesContent": [
+		"body {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Helvetica';\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,IAAI,AAAC,CACJ,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,WAAW,CAAE,WAAW,CACxB"
+}
