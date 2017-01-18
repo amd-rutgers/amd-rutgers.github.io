@@ -1,0 +1,37 @@
+{
+  "name": "rutgers-design2b-2017",
+  "version": "0.0.1",
+  "description": "Class site for Rugers Design II-B, Spring 2017",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run metalsmith\" \"npm run server\"",
+    "metalsmith": "node index.js --watch",
+    "build": "node index.js",
+    "server": "http-server build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyinabox/rutgers-design2b-2017.git"
+  },
+  "author": "Andy Dayton <amdayton@gmail.com> (http://andydayton.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyinabox/rutgers-design2b-2017/issues"
+  },
+  "homepage": "https://github.com/andyinabox/rutgers-design2b-2017#readme",
+  "dependencies": {
+    "browserify": "^13.3.0",
+    "concurrently": "^3.1.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-browserify": "^0.2.4",
+    "metalsmith-layouts": "^1.7.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metallic": "^2.0.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-sass": "^1.4.0",
+    "metalsmith-watch": "^1.0.3",
+    "minimist": "^1.2.0",
+    "mustache": "^2.3.0",
+    "watchify": "^3.8.0"
+  }
+}
