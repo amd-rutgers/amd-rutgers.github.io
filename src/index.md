@@ -1,5 +1,22 @@
 ---
+title: II-B or not II-B
 layout: layout.html
 ---
 
-<h2>Read what I have to say</h2>
+Updates
+========
+
+
+Lectures
+=========
+
+* Week 1
+
+Readings
+=========
+
+Resources
+==========
+
+JavaScript
+-----------
