@@ -20,7 +20,7 @@ Schedule subject to change based on how the semester goes. One day at a time!
 Unit I: Online Publishing
 -------------------------
 
-* Week 01 - Introduction to web publishing
+* [Week 01 - Introduction to web publishing](/classes/01/)
 * Week 02 - Content & styles
 * Week 03 - Behavior & graphics
 * Week 04 - Presentations

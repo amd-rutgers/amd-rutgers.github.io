@@ -5,21 +5,17 @@ var layouts     = require('metalsmith-layouts');
 var permalinks  = require('metalsmith-permalinks');
 var watch       = require('metalsmith-watch');
 var sass        = require('metalsmith-sass');
-var metallic    = require('metalsmith-metallic');
 var browserify  = require('metalsmith-browserify');
 var date        = require('metalsmith-build-date');
 
 var ms = Metalsmith(__dirname)
   .metadata({
-    title: "My Static Site & Blog",
-    description: "It's about saying »Hello« to the World.",
-    generator: "Metalsmith",
-    url: "http://www.metalsmith.io/"
+    title: "II-B or not II-B",
   })
-  .use(date())
   .source('./src')
   .destination('./build')
   .clean(false)
+  .use(date())
   .use(sass({
     sourceMap: true,
     sourceMapContents: true
@@ -38,15 +34,15 @@ var ms = Metalsmith(__dirname)
   .use(layouts({
     engine: 'handlebars',
     partials: 'partials'
-  }));
+  }))
 
 if(argv.watch) {
   ms.use(
     watch({
       paths: {
-        "${source}/**/*": true,
-        "layouts/**/*": true,
-        "partials/**/*": true
+        "${source}/**/*": "**/*",
+        "layouts/**/*": "**/*",
+        "partials/**/*": "**/*"
       },
       livereload: true,
     })

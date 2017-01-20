@@ -2,6 +2,7 @@ const fonts = require('google-fonts');
 const transform = require('dom-css-transform');
 const mousePosition = require('mouse-position');
 const smoothScroll = require('smooth-scroll');
+const hljs = require('highlight.js');
 
 const min = a => Math.min.apply(this, a);
 const max = a => Math.max.apply(this, a);
@@ -15,8 +16,12 @@ let mainNav = header.querySelector('.main-nav');
 let mainNavMenuContainer = mainNav.querySelector('.main-nav-items');
 let mainNavBtn = mainNav.querySelector('.main-nav-icon');
 
+if(location.pathname !== '/') {
+	document.body.classList.add('interior-page');
+}
+
 fonts.add({
-	'Open Sans': true,
+	'Overpass': true,
 	'Overpass Mono': true
 });
 
@@ -46,10 +51,13 @@ document.querySelectorAll("#main h1").forEach(function(el) {
 
 }); 
 
-
 mainNavBtn.addEventListener('click', function(event) {
 	event.preventDefault();
 	mainNav.classList.toggle('open');
+});
+
+document.querySelectorAll('pre code').forEach(function(el) {
+	hljs.highlightBlock(el);
 });
 
 document.body.addEventListener('keydown', function(event) {

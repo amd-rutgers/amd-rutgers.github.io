@@ -2,6 +2,8 @@
 // variables
 //
 
+// @import "highlight/styles/dracula.css";
+
 $bg-color: #ffff00;
 $primary-font-family: 'Overpass';
 $secondary-font-family: 'Overpass Mono';
@@ -34,14 +36,6 @@ h1, h2, h3, h4, h5 {
 	font-family: $secondary-font-family;
 }
 
-h1 {
-	font-size: 8vmin;
-	color: #f0f;
-	margin-top: $header-height * 3;
-	&:first-child {
-		margin-top: 0;
-	}
-}
 
 ul, ol {
 	padding: 0;
@@ -68,20 +62,30 @@ a {
 	}
 
 	&:visited {
-		color: $link-visited-color;
-		text-decoration: line-through;
+		color: $link-color;
+	}
+
+	&:visited:hover {
+		color: $link-hover-color;
 	}
 }
 
-pre {
-	background: #438;
-	color: #0ff;
-	padding: 1vmin 2vw;
-}
+
 
 pre, code {
 	font-family: $secondary-font-family;
 }
+
+code {
+	color: #f0f;
+}
+
+pre > code {
+	color: #000;
+	padding: 0.5em;
+}
+
+
 
 // 
 // the rest
@@ -93,21 +97,34 @@ pre, code {
 	left: 0;
 	width: 100%;
 	height: $header-height;
-	background: linear-gradient(rgba(255, 255, 0, 1.0), rgba(255, 255, 0, 0));
+	// background: linear-gradient(rgba(255, 255, 0, 1.0), rgba(255, 255, 0, 0));
 
 	h1.main-title {
 		position: absolute;
-		color: #000;
 		right: $side-margin;
 		top: 0;
 		margin: 0;
 		line-height: $header-height;
 
 		a {
-			display: block;
-			color: #000;
+			font-weight: normal;
+			display: inline-block;
 		}
 
+		.back {
+			// display: none;
+			display: inline-block;
+			transform: rotateX(90deg);
+			// transition-delay: 200ms;
+			transition: transform 300ms 1000ms linear;
+		}
+
+		.interior-page & {
+			.back {
+				display: inline-block;
+				transform: rotateX(0deg);
+			}
+		}
 
 	}
 
@@ -115,7 +132,7 @@ pre, code {
 		position: absolute;
 		top: 0;
 		left: $side-margin;
-		display: inline-block;
+		width: $main-nav-font-size;
 
 
 		a.main-nav-icon {
@@ -126,6 +143,11 @@ pre, code {
 			color: $link-color;
 			transform: rotateX(0deg);
 			transition: transform 200ms linear;
+			display: block;
+
+			&:hover {
+				color: $link-hover-color;
+			}
 		}
 
 		ol.main-nav-items {			
@@ -177,7 +199,15 @@ pre, code {
 }
 
 #main {
-	padding: 0 $side-margin;
-	padding-top: $header-height;
-	padding-bottom: $header-height*2;
+	padding: $header-height $side-margin;
+
+	h1 {
+		font-size: 8vmin;
+		color: #f0f;
+		margin-top: $header-height * 3;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 }

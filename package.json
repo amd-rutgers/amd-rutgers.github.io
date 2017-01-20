@@ -1,12 +1,13 @@
 {
   "name": "rutgers-design2b-2017",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Class site for Rugers Design II-B, Spring 2017",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run metalsmith\" \"npm run server\"",
-    "metalsmith": "node index.js --watch",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run server\"",
+    "highlight": "node node_modules/highlight.js/tools/build.js -t browser",
     "build": "node index.js",
+    "watch": "node index.js --watch",
     "server": "http-server build/",
     "deploy-gh": "npm run build; gh-pages -d build",
     "deploy": "npm run build; rsync -avz build/ /Volumes/art.rutgers.edu/dayton/Sites/"
@@ -24,6 +25,7 @@
   "dependencies": {
     "dom-css-transform": "^2.0.2",
     "google-fonts": "^1.0.0",
+    "highlight.js": "^9.9.0",
     "metalsmith-build-date": "andyinabox/metalsmith-build-date#timestamp",
     "mouse-position": "^2.0.1",
     "smooth-scroll": "cferdinandi/smooth-scroll"
@@ -37,7 +39,6 @@
     "metalsmith-browserify": "^0.2.4",
     "metalsmith-layouts": "^1.7.0",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-metallic": "^2.0.1",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-sass": "^1.4.0",
     "metalsmith-watch": "^1.0.3",
