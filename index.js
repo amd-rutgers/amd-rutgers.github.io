@@ -7,6 +7,7 @@ var watch       = require('metalsmith-watch');
 var sass        = require('metalsmith-sass');
 var metallic    = require('metalsmith-metallic');
 var browserify  = require('metalsmith-browserify');
+var date        = require('metalsmith-build-date');
 
 var ms = Metalsmith(__dirname)
   .metadata({
@@ -15,12 +16,13 @@ var ms = Metalsmith(__dirname)
     generator: "Metalsmith",
     url: "http://www.metalsmith.io/"
   })
+  .use(date())
   .source('./src')
   .destination('./build')
   .clean(false)
   .use(sass({
     sourceMap: true,
-    sourceMapContents: true   // This will embed all the Sass contents in your source maps.
+    sourceMapContents: true
   }))
   .use(browserify({
     dest: 'bundle.js',
@@ -28,10 +30,14 @@ var ms = Metalsmith(__dirname)
     sourcemaps: true,
     watch: false
   }))
-  .use(markdown())
+  .use(markdown({
+    gfm: true,
+    breaks: true
+  }))
   .use(permalinks())
   .use(layouts({
-    engine: 'mustache'
+    engine: 'handlebars',
+    partials: 'partials'
   }));
 
 if(argv.watch) {
@@ -39,7 +45,8 @@ if(argv.watch) {
     watch({
       paths: {
         "${source}/**/*": true,
-        "templates/**/*": "**/*.md",
+        "layouts/**/*": true,
+        "partials/**/*": true
       },
       livereload: true,
     })
