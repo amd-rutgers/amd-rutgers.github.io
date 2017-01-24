@@ -13,6 +13,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const cssimport = require('gulp-cssimport');
+const s3 = require('gulp-s3-upload')({ useIAM:true });
 
 // metalsmith plugins
 const markdown    = require('metalsmith-markdown');
@@ -23,7 +24,12 @@ const assets      = require('metalsmith-assets');
 
 
 gulp.task('assets', function() {
-  
+  return gulp.src('./assets/**')
+    .pipe(s3({
+      Bucket: '2b.andydayton.com',
+      ACL: 'public-read'
+    }))
+    .pipe(connect.reload())
 });
 
 gulp.task('css', function() {
@@ -95,8 +101,9 @@ gulp.task('watch', function() {
     './layouts/**/*',
     './partials/**/*'
   ], ['html']);
-  gulp.watch(['/src/**/*.scss'], ['css']);
-  gulp.watch(['/src/**/*.js'], ['js']);
+  gulp.watch(['./src/**/*.scss'], ['css']);
+  gulp.watch(['./src/**/*.js'], ['js']);
+  gulp.watch(['./assets/**/*'], ['assets']);
 });
 
 gulp.task('connect', function() {
@@ -115,4 +122,4 @@ gulp.task('clobber', function() {
 
 gulp.task('dev', ['connect', 'watch']);
 
-gulp.task('build', ['html', 'css', 'js']);
+gulp.task('build', ['assets', 'html', 'css', 'js']);
