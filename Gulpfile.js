@@ -5,13 +5,13 @@ const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
 const del = require('del');
+const run = require('run-sequence');
 
 // gulp plugins
 const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
-const plumber = require('gulp-plumber');
 const cssimport = require('gulp-cssimport');
 
 // metalsmith plugins
@@ -21,58 +21,6 @@ const permalinks  = require('metalsmith-permalinks');
 const rootPath    = require('metalsmith-rootpath');
 const assets      = require('metalsmith-assets');
 
-
-//var ms = Metalsmith(__dirname)
-//  .metadata({
-//    title: "II-B or not II-B",
-//  })
-//  .source('./src')
-//  .destination('./build')
-//  .clean(true)
-//  .use(date())
-//  .use(sass({
-//    sourceMap: true,
-//    sourceMapContents: true
-//  }))
-//  .use(browserify({
-//    dest: 'bundle.js',
-//    entries: ['./src/index.js'],
-//    sourcemaps: true,
-//    watch: false
-//  }))
-//  .use(markdown({
-//    gfm: true,
-//    breaks: true,
-//    smartypants: true
-//  }))
-//  .use(permalinks())
-//  .use(rootPath())
-//  .use(layouts({
-//    engine: 'handlebars',
-//    partials: 'partials'
-//  }))
-//  .use(assets({
-//    source: './assets', // relative to the working directory
-//    destination: './assets' // relative to the build directory
-//  }))
-//
-//if(argv.watch) {
-//  ms.use(
-//    watch({
-//      paths: {
-//        "${source}/**/*": "**/*",
-//        "layouts/**/*": "**/*",
-//        "partials/**/*": "**/*"
-//      },
-//      livereload: true,
-//    })
-//  )
-//}
-//
-//
-//ms.build(function(err, files) {
-//  if (err) { throw err; }
-//});
 
 gulp.task('assets', function() {
   
@@ -85,6 +33,8 @@ gulp.task('css', function() {
       .pipe(cssimport())
     .pipe(sourcemaps.write('./maps/'))
     .pipe(gulp.dest('./build/'))
+    .pipe(connect.reload())
+
 });
 
 gulp.task('js', function () {
@@ -97,13 +47,13 @@ gulp.task('js', function () {
   b.transform(babelify, { presets: "babel-preset-latest"});
   
   return b.bundle()
-      .pipe(plumber())
       .pipe(source('index.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init())
         .pipe(uglify())
       .pipe(sourcemaps.write('./maps/'))
-      .pipe(gulp.dest('./build/'));
+      .pipe(gulp.dest('./build/'))
+      .pipe(connect.reload());
 });
 
 gulp.task('html', function() {
@@ -125,25 +75,44 @@ gulp.task('html', function() {
           partials: 'partials'
         }),
         assets({
-          source: './assets', // relative to the working directory
-          destination: './assets' // relative to the build directory
+          source: './assets',
+          destination: './assets'
         })
       ],
       metadata: {
         title: "II-B or not II-B",
         timestamp: Date.now()
       }
-    })).pipe(gulp.dest('build'));
+    }))
+    .pipe(gulp.dest('build'))
+    .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
-  
+  gulp.watch([
+    './src/**/*.md',
+    './src/**/*.html',
+    './layouts/**/*',
+    './partials/**/*'
+  ], ['html']);
+  gulp.watch(['/src/**/*.scss'], ['css']);
+  gulp.watch(['/src/**/*.js'], ['js']);
 });
 
-gulp.task('clean', function() {
+gulp.task('connect', function() {
+  connect.server({
+    root: './build',
+    livereload: true
+  });
+});
+
+
+gulp.task('clobber', function() {
   return del([
     './build/*'
   ]);
-})
+});
+
+gulp.task('dev', ['connect', 'watch']);
 
 gulp.task('build', ['html', 'css', 'js']);
