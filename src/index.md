@@ -27,8 +27,8 @@ Schedule subject to change based on how the semester goes. One day at a time!
 Unit I: Online Publishing
 -------------------------
 
-* [Week 01 - Introductions](/classes/01/)
-* Week 02
+* [Week 01 - Introductions](classes/01/)
+* [Week 02 - Content & Style](classes/02/)
 * Week 03
 * Week 04
 * Week 05
