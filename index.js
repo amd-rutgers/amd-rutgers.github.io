@@ -7,6 +7,9 @@ var watch       = require('metalsmith-watch');
 var sass        = require('metalsmith-sass');
 var browserify  = require('metalsmith-browserify');
 var date        = require('metalsmith-build-date');
+var rootPath    = require('metalsmith-rootpath');
+var assets      = require('metalsmith-assets');
+
 
 var ms = Metalsmith(__dirname)
   .metadata({
@@ -14,7 +17,7 @@ var ms = Metalsmith(__dirname)
   })
   .source('./src')
   .destination('./build')
-  .clean(false)
+  .clean(true)
   .use(date())
   .use(sass({
     sourceMap: true,
@@ -28,12 +31,18 @@ var ms = Metalsmith(__dirname)
   }))
   .use(markdown({
     gfm: true,
-    breaks: true
+    breaks: true,
+    smartypants: true
   }))
   .use(permalinks())
+  .use(rootPath())
   .use(layouts({
     engine: 'handlebars',
     partials: 'partials'
+  }))
+  .use(assets({
+    source: './assets', // relative to the working directory
+    destination: './assets' // relative to the build directory
   }))
 
 if(argv.watch) {

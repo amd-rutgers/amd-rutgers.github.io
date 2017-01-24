@@ -3,14 +3,17 @@ title: II-B or not II-B
 layout: index.html
 ---
 
-Status
+Currently
 ========
 
-Something
-----------
+Welcome to Design II-B! This site is a work in progress, but it will be your hub for all things  related to this class. Looking forward to meeting all of you.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This week we're:
+
+ * Handling some intruductions
+ * Discussing an excerpt of Lev Manovich's _The Language of New Media_ along with Werner Herzog's "Lo and Behold."
+ * Learning a bit more about the web as a medium
+ * Starting to dive into making websites
 
 Classes
 =========
@@ -20,7 +23,7 @@ Schedule subject to change based on how the semester goes. One day at a time!
 Unit I: Online Publishing
 -------------------------
 
-* [Week 01 - Introduction to web publishing](/classes/01/)
+* [Week 01 - Introductions](/classes/01/)
 * Week 02 - Content & styles
 * Week 03 - Behavior & graphics
 * Week 04 - Presentations
@@ -44,32 +47,37 @@ Unit III: Physical Interaction with Digital Interfaces
 * Week 14 - Show & tell, farewell...
 
 
-Readings
-=========
+Books & Readings
+=================
 
-Not all of these are required — readings will be assigned as the semester continues.
+Not all of these are required, but they're all worth a look. Readings will be assigned as the semester continues.
 
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
-* Lev Manovich, <cite>The Language of New Media</cite>
+Theory & Philosophy
+--------------------
+* Lev Manovich, [_The Language of New Media_](https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf)
+* Douglas Rushkoff, [_Program or Be Programmed: Ten Commands for a Digital Age_](https://s3.amazonaws.com/2b.andydayton.com/rushkoff-program-or-be-programmed.pdf)
+* Steven R. Holtzman, [_Digital Mantras: The Language of Abstract and Virtual Worlds_](https://www.goodreads.com/book/show/1485977.Digital_Mantras)
+
+Design
+-------
+* Edward R. Tufte, [_The Visual Display of Quantitative Information_](https://www.goodreads.com/book/show/17744.The_Visual_Display_of_Quantitative_Information)
+* Karl Gerstner, [_Designing Programmes_](https://s3.amazonaws.com/2b.andydayton.com/Gerstner_Designing-Programmes.pdf) (Introduction by Paul Gredinger)
+
+
+Inspiration
+------------
+* Giorgia Lupi and Stefanie Prosavec, [_Dear Data_](https://www.goodreads.com/book/show/28465052-dear-data)
+
+
+Reference
+---------
+* Daniel Schiffman, [_The Nature of Code_](http://natureofcode.com/book/) (free online)
 
 
 Resources
 ==========
 
-An extensive (but not exhaustive) list of helpful resources.
-
-TL;DR;
--------
-
-* [w3schools](http://www.w3schools.com/) — a great place for finding geneeral information about HTML/CSS/JavaScript
-* [Mozilla Developer Network](https://developer.mozilla.org/en-US/) — this is a more detailed/technical resource for when you really want to know what's going on (although know that it has a bias toward the Firefox browser)
-
+A list of helpful links.
 
 HTML
 -----
@@ -87,9 +95,18 @@ CSS
 * [CSS Tricks](http://css-tricks.com/) — this is a great place to find well-tested CSS tricks and learn about fancy new CSS techniques.
 
 
-JavaScript
------------
+Inspiration
+------------
 
+ * [Eyeo Festival on Vimeo](https://vimeo.com/eyeofestival)
+ * [Creative Applications](http://www.creativeapplications.net/)
+ * [Ubuweb](http://ubuweb.com/)
+ * [Rhizome.org Artbase](http://rhizome.org/art/artbase/)
+
+Computer Lab
+-------------
+
+ * [Remote file access](http://art.rutgers.edu/Computer_Lab_Information/remote_file_access/index.html) (logging into your account from home)
 
 
 Students
@@ -118,4 +135,4 @@ Instructor: [Andy Dayton](andrew.dayton@rutgers.edu)
 Mondays, 9:50am – 4:10pm
 33 Livingston Ave. Room #224
 
-[Class syllabus](https://docs.google.com/document/d/1cwxx9aWn1HdeqI9jF9a869dTQFoC5qtUhDZKN6fPz6c/edit?usp=drive_web)
+ * [Class syllabus](https://docs.google.com/document/d/1cwxx9aWn1HdeqI9jF9a869dTQFoC5qtUhDZKN6fPz6c/edit?usp=drive_web)

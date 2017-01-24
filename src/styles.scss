@@ -29,7 +29,7 @@ body {
 	padding: 0;
 	background: $bg-color;
 	font-family: $primary-font-family;
-	font-size: 4vmin;
+	font-size: 3.5vmin;
 }
 
 h1, h2, h3, h4, h5 {
@@ -85,7 +85,29 @@ pre > code {
 	padding: 0.5em;
 }
 
+blockquote {
+    color: #ff0;
+    background: #000;
+    padding: 1em;
+    margin: 0;
+    
+    p:first-child {
+        margin-top: 0;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+    
+    cite {
+        font-style: normal;
+    }
+}
 
+img, iframe, video {
+    width: 100%;
+    min-height: 50vh;
+}
 
 // 
 // the rest
@@ -205,9 +227,18 @@ pre > code {
 		font-size: 8vmin;
 		color: #f0f;
 		margin-top: $header-height * 3;
+    }
 
-		&:first-child {
-			margin-top: 0;
-		}
-	}
+    h1:first-of-type {
+        margin-top: 0;       
+    }
+    
+    h2 {
+        font-size: 5vmin;
+    }
+    
+    section.full-frame {
+        height: 100vh;
+        padding: 5vmin;
+    }
 }
