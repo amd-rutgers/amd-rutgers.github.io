@@ -36,6 +36,9 @@ h1, h2, h3, h4, h5 {
 	font-family: $secondary-font-family;
 }
 
+h2, h3, h4, h5 {
+  margin-top: 2em;
+}
 
 ul, ol {
 	padding: 0;
@@ -102,6 +105,26 @@ blockquote {
     cite {
         font-style: normal;
     }
+}
+
+table {
+  font-size: 80%;
+  
+  tr {
+    th, td {
+      padding: 0.5em;
+      background: #000;
+      color: #ff0;
+    }
+    
+    th {
+      
+    }
+    
+    td {
+      
+    }
+  }
 }
 
 img, iframe, video {
@@ -224,7 +247,7 @@ img, iframe, video {
 	padding: $header-height $side-margin;
 
 	h1 {
-		font-size: 8vmin;
+		font-size: 225%;
 		color: #f0f;
 		margin-top: $header-height * 3;
     }
@@ -234,7 +257,15 @@ img, iframe, video {
     }
     
     h2 {
-        font-size: 5vmin;
+        font-size: 150%;
+    }
+  
+    h3 {
+      font-size: 125%;
+    }
+  
+    h4 {
+      font-size: 100%;  
     }
     
     section.full-frame {

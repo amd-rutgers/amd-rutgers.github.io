@@ -6,14 +6,18 @@ layout: index.html
 Currently
 ========
 
-Welcome to Design II-B! This site is a work in progress, but it will be your hub for all things  related to this class. Looking forward to meeting all of you.
+Welcome to Design II-B! This is our website. 
 
-This week we're:
+<pre>
+Soon we'll be coding
+The web and its protocols
+Don't forget to save
+</pre>
 
- * Handling some intruductions
- * Discussing an excerpt of Lev Manovich's _The Language of New Media_ along with Werner Herzog's "Lo and Behold."
- * Learning a bit more about the web as a medium
- * Starting to dive into making websites
+* Read Lev Manovich, [_The Language of New Media_](https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf) (pp. 43–66)
+* Pick a favorite website to bring to class. We'll open up the hood and see how it works.
+* Select a poem to use when we continue with HTML/CSS next class. A good place to start: [Poetry at Project Gutenberg](https://www.gutenberg.org/wiki/Poetry_%28Bookshelf%29). Or write your own!
+
 
 Classes
 =========
@@ -24,27 +28,27 @@ Unit I: Online Publishing
 -------------------------
 
 * [Week 01 - Introductions](/classes/01/)
-* Week 02 - Content & styles
-* Week 03 - Behavior & graphics
-* Week 04 - Presentations
-* Week 05 - Make it move!
+* Week 02
+* Week 03
+* Week 04
+* Week 05
 
 Unit II: Algorithmic Design
 ------------------------------
 
-* Week 06 - Drawing with code
-* Week 07 - Visualizing data
-* Week 08 - Presentations
-* Week 09 - Advanced programming & interaction
-* Week 10 - Interactive data visualization
+* Week 06
+* Week 07
+* Week 08
+* Week 09
+* Week 10
 
 Unit III: Physical Interaction with Digital Interfaces
 -----------------------------------------------------
 
-* Week 11 - Circuits & sensors
-* Week 12 - Experimental instruments
-* Week 13 - Research & concepting
-* Week 14 - Show & tell, farewell...
+* Week 11
+* Week 12
+* Week 13
+* Week 14
 
 
 Books & Readings
@@ -57,6 +61,7 @@ Theory & Philosophy
 * Lev Manovich, [_The Language of New Media_](https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf)
 * Douglas Rushkoff, [_Program or Be Programmed: Ten Commands for a Digital Age_](https://s3.amazonaws.com/2b.andydayton.com/rushkoff-program-or-be-programmed.pdf)
 * Steven R. Holtzman, [_Digital Mantras: The Language of Abstract and Virtual Worlds_](https://www.goodreads.com/book/show/1485977.Digital_Mantras)
+* Alexander Galloway, [_Protocol_](https://mitpress.mit.edu/books/protocol)
 
 Design
 -------
