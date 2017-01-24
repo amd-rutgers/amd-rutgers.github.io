@@ -25,26 +25,35 @@
   "dependencies": {
     "dom-css-transform": "^2.0.2",
     "google-fonts": "^1.0.0",
+    "gulp-cssimport": "^5.0.0",
     "highlight.js": "^9.9.0",
-    "metalsmith-build-date": "andyinabox/metalsmith-build-date#timestamp",
     "mouse-position": "^2.0.1",
     "smooth-scroll": "cferdinandi/smooth-scroll"
   },
   "devDependencies": {
+    "babel-preset-latest": "^6.22.0",
+    "babelfy": "^1.1.0",
+    "babelify": "^7.3.0",
     "browserify": "^13.3.0",
     "concurrently": "^3.1.0",
+    "del": "^2.2.2",
     "gh-pages": "^0.12.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-metalsmith": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.1",
     "handlebars": "^4.0.6",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
-    "metalsmith-browserify": "^0.2.4",
     "metalsmith-layouts": "^1.7.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-rootpath": "^1.0.4",
-    "metalsmith-sass": "^1.4.0",
-    "metalsmith-watch": "^1.0.3",
-    "minimist": "^1.2.0",
-    "watchify": "^3.8.0"
+    "run": "^1.4.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
