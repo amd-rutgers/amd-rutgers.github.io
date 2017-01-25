@@ -1,11 +1,12 @@
 const gulp = require('gulp');
-const metalsmith = require('gulp-metalsmith');
+const gulpsmith = require('gulpsmith');
 const browserify = require('browserify');
 const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
 const del = require('del');
 const run = require('run-sequence');
+const assign = require('node-assign');
 
 // gulp plugins
 const connect = require('gulp-connect');
@@ -14,14 +15,12 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const cssimport = require('gulp-cssimport');
 const s3 = require('gulp-s3-upload')({ useIAM:true });
+const frontmatter = require('gulp-front-matter');
 
 // metalsmith plugins
-const markdown    = require('metalsmith-markdown');
-const layouts     = require('metalsmith-layouts');
-const permalinks  = require('metalsmith-permalinks');
-const rootPath    = require('metalsmith-rootpath');
-const assets      = require('metalsmith-assets');
-
+const markdown = require('metalsmith-markdown');
+const layouts = require('metalsmith-layouts');
+const grep = require('metalsmith-grep');
 
 gulp.task('assets', function() {
   return gulp.src('./assets/**')
@@ -63,33 +62,39 @@ gulp.task('js', function () {
 });
 
 gulp.task('html', function() {
-  return gulp.src('src/**')
-    .pipe(metalsmith({
-      root: __dirname,
-      fontmatter: true,
-      ignore: ['src/**/*.js', 'src/**/*.sass', 'src/**/*.scss'],
-      use: [
-        markdown({
-          gfm: true,
-          breaks: true,
-          smartypants: true
-        }),
-        permalinks(),
-        rootPath(),
-        layouts({
-          engine: 'handlebars',
-          partials: 'partials'
-        }),
-        assets({
-          source: './assets',
-          destination: './assets'
-        })
-      ],
-      metadata: {
+
+ return gulp.src([
+     'src/**',
+     '!src/**/*.js',
+     '!src/**/*.scss',
+     '!src/**/*.scss'
+    ])
+    .pipe(frontmatter()).on("data", function(file) {
+        if(file.frontMatter) {
+          assign(file, file.frontMatter);
+        }
+    })
+    .pipe(gulpsmith()
+      .metadata({
         title: "II-B or not II-B",
         timestamp: Date.now()
-      }
-    }))
+      })
+      .use(grep({ subs: [
+        {
+          search: /\/assets\//g,
+          replace: "https://s3.amazonaws.com/2b.andydayton.com/"
+        }
+      ]}))
+      .use(markdown({
+        gfm: true,
+        breaks: true,
+        smartypants: true
+      }))
+      .use(layouts({
+        engine: 'handlebars',
+        partials: 'partials'
+      }))
+    )
     .pipe(gulp.dest('build'))
     .pipe(connect.reload());
 });
@@ -121,5 +126,5 @@ gulp.task('clobber', function() {
 });
 
 gulp.task('dev', ['connect', 'watch']);
-
 gulp.task('build', ['assets', 'html', 'css', 'js']);
+gulp.task('default', ['build']);
