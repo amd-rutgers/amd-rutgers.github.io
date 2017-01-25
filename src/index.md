@@ -58,8 +58,8 @@ Not all of these are required, but they're all worth a look. Readings will be as
 
 Theory & Philosophy
 --------------------
-* Lev Manovich, [_The Language of New Media_](https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf)
-* Douglas Rushkoff, [_Program or Be Programmed: Ten Commands for a Digital Age_](https://s3.amazonaws.com/2b.andydayton.com/rushkoff-program-or-be-programmed.pdf)
+* Lev Manovich, [_The Language of New Media_](/assets/the+language+of+the+new+media_manovich.pdf)
+* Douglas Rushkoff, [_Program or Be Programmed: Ten Commands for a Digital Age_](/assets/rushkoff-program-or-be-programmed.pdf)
 * Steven R. Holtzman, [_Digital Mantras: The Language of Abstract and Virtual Worlds_](https://www.goodreads.com/book/show/1485977.Digital_Mantras)
 * Alexander Galloway, [_Protocol_](https://mitpress.mit.edu/books/protocol)
 
@@ -131,7 +131,7 @@ Students
 * Youli Yin
 
 
-Class Info
+Class info
 ===========
 
 **Design II-B**
