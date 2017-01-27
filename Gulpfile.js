@@ -1,3 +1,4 @@
+const argv = process.argv.slice(2);
 const gulp = require('gulp');
 const gulpsmith = require('gulpsmith');
 const browserify = require('browserify');
@@ -21,6 +22,39 @@ const frontmatter = require('gulp-front-matter');
 const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const grep = require('metalsmith-grep');
+const permalinks = require('metalsmith-permalinks');
+
+const subs = [
+  {
+    search: /\/assets\//g,
+    replace: "https://s3.amazonaws.com/2b.andydayton.com/"
+  }
+]
+
+//let remoteAssets = argv.indexOf('--local') > -1 ? false : true;
+
+function metalsmith() {
+  let gs = gulpsmith();
+  
+  gs
+  .metadata({
+    title: "II-B or not II-B",
+    timestamp: Date.now()
+  })
+  .use(grep({ subs: subs }))
+  .use(markdown({
+    gfm: true,
+    breaks: true,
+    smartypants: true
+  }))
+  .use(layouts({
+    engine: 'handlebars',
+    partials: 'partials'
+  }))
+  .use(permalinks())
+  
+  return gs;
+}
 
 gulp.task('assets', function() {
   return gulp.src('./assets/**')
@@ -74,27 +108,7 @@ gulp.task('html', function() {
           assign(file, file.frontMatter);
         }
     })
-    .pipe(gulpsmith()
-      .metadata({
-        title: "II-B or not II-B",
-        timestamp: Date.now()
-      })
-      .use(grep({ subs: [
-        {
-          search: /\/assets\//g,
-          replace: "https://s3.amazonaws.com/2b.andydayton.com/"
-        }
-      ]}))
-      .use(markdown({
-        gfm: true,
-        breaks: true,
-        smartypants: true
-      }))
-      .use(layouts({
-        engine: 'handlebars',
-        partials: 'partials'
-      }))
-    )
+    .pipe(metalsmith())
     .pipe(gulp.dest('build'))
     .pipe(connect.reload());
 });

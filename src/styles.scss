@@ -272,4 +272,17 @@ img, iframe, video {
         height: 100vh;
         padding: 5vmin;
     }
+  
+    .code-columns {
+      pre {
+        font-size: 70%;
+        width: 45%;
+        float: left;
+        
+        &:first-child {
+          margin-right: 5%;
+        }
+      }
+      
+    }
 }
