@@ -8,6 +8,7 @@ const source = require('vinyl-source-stream');
 const del = require('del');
 const run = require('run-sequence');
 const assign = require('node-assign');
+const Handlebars = require('handlebars');
 
 // gulp plugins
 const connect = require('gulp-connect');
@@ -23,7 +24,9 @@ const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const grep = require('metalsmith-grep');
 const permalinks = require('metalsmith-permalinks');
+const inPlace = require('metalsmith-in-place');
 
+const helpers = require('./helpers.js');
 const subs = [
   {
     search: /\/assets\//g,
@@ -31,7 +34,17 @@ const subs = [
   }
 ]
 
+
 //let remoteAssets = argv.indexOf('--local') > -1 ? false : true;
+
+//const helpers = {
+//  test: function(options) {
+//    return new Handlebars.SafeString(
+//        '<div class="mybold">'
+//        + options.fn(this)
+//        + '</div>');
+//  }
+//}
 
 function metalsmith() {
   let gs = gulpsmith();
@@ -42,10 +55,15 @@ function metalsmith() {
     timestamp: Date.now()
   })
   .use(grep({ subs: subs }))
-  .use(markdown({
-    gfm: true,
-    breaks: true,
-    smartypants: true
+//  .use(markdown({
+//    gfm: true,
+//    breaks: true,
+//    smartypants: true
+//  }))
+  .use(inPlace({
+    engineOptions: {
+      helpers: helpers
+    }
   }))
   .use(layouts({
     engine: 'handlebars',
