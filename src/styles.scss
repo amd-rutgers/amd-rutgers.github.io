@@ -24,6 +24,14 @@ $title-font-size: 10vmin;
 // 	background: $bg-color;
 // }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -274,13 +282,19 @@ img, iframe, video {
     }
   
     .code-columns {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      
+      p {
+        display: none;
+      }
+      
       pre {
-        font-size: 70%;
-        width: 45%;
-        float: left;
-        
-        &:first-child {
-          margin-right: 5%;
+        width: 49%;
+        font-size: 50%;
+        code {
+          height: 100%;
         }
       }
       

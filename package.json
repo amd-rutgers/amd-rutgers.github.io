@@ -29,6 +29,7 @@
     "smooth-scroll": "cferdinandi/smooth-scroll"
   },
   "devDependencies": {
+    "autoprefixer": "^6.7.0",
     "babel-preset-latest": "^6.22.0",
     "babelfy": "^1.1.0",
     "babelify": "^7.3.0",
@@ -39,6 +40,7 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-front-matter": "^1.3.0",
+    "gulp-postcss": "^6.3.0",
     "gulp-s3-upload": "^1.6.4",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.0",

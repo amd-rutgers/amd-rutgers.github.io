@@ -1,0 +1,24 @@
+body {
+  background-color: snow;
+  color: lightsteelblue;
+  
+  font-family: "Helvetica";
+  font-size: 35px;
+  
+  padding: 20%;
+}
+
+pre {
+  font-family: "Georgia";
+  font-size: 150%;
+  margin: 0;
+}
+
+p {
+  text-align: right;
+}
+
+a {
+  color: lightslategray;
+  text-decoration: none;
+}

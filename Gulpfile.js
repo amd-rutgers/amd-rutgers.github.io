@@ -9,6 +9,7 @@ const del = require('del');
 const run = require('run-sequence');
 const assign = require('node-assign');
 const Handlebars = require('handlebars');
+const autoprefixer = require('autoprefixer');
 
 // gulp plugins
 const connect = require('gulp-connect');
@@ -18,6 +19,7 @@ const uglify = require('gulp-uglify');
 const cssimport = require('gulp-cssimport');
 const s3 = require('gulp-s3-upload')({ useIAM:true });
 const frontmatter = require('gulp-front-matter');
+const postcss = require('gulp-postcss');
 
 // metalsmith plugins
 const markdown = require('metalsmith-markdown');
@@ -34,18 +36,6 @@ const subs = [
   }
 ]
 
-
-//let remoteAssets = argv.indexOf('--local') > -1 ? false : true;
-
-//const helpers = {
-//  test: function(options) {
-//    return new Handlebars.SafeString(
-//        '<div class="mybold">'
-//        + options.fn(this)
-//        + '</div>');
-//  }
-//}
-
 function metalsmith() {
   let gs = gulpsmith();
   
@@ -55,14 +45,13 @@ function metalsmith() {
     timestamp: Date.now()
   })
   .use(grep({ subs: subs }))
-//  .use(markdown({
-//    gfm: true,
-//    breaks: true,
-//    smartypants: true
-//  }))
+
   .use(inPlace({
     engineOptions: {
-      helpers: helpers
+      helpers: helpers,
+      html: true,
+      linkify: true,
+      typographer: true
     }
   }))
   .use(layouts({
@@ -84,10 +73,11 @@ gulp.task('assets', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src('./src/styles.scss')
+  return gulp.src(['./src/styles.scss'])
     .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(cssimport())
+      .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write('./maps/'))
     .pipe(gulp.dest('./build/'))
     .pipe(connect.reload())
@@ -135,6 +125,7 @@ gulp.task('watch', function() {
   gulp.watch([
     './src/**/*.md',
     './src/**/*.html',
+    './src/**/*.css',
     './layouts/**/*',
     './partials/**/*'
   ], ['html']);
