@@ -3,21 +3,12 @@ title: II-B or not II-B
 layout: index.html
 ---
 
-Currently
-========
+Next class
+============
 
-Welcome to Design II-B! This is our website. 
-
-<pre>
-Soon we'll be coding
-The web and its protocols
-Don't forget to save
-</pre>
-
-* Read Lev Manovich, [_The Language of New Media_](https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf) (pp. 43–66)
-* Pick a favorite website to bring to class. We'll open up the hood and see how it works.
-* Select a poem to use when we continue with HTML/CSS next class. A good place to start: [Poetry at Project Gutenberg](https://www.gutenberg.org/wiki/Poetry_%28Bookshelf%29). Or write your own!
-
+1. Finish ["linked verse"](http://localhost:8080/classes/02/#linked-verse) poetry project
+2. Research portfolio websites for inspiration, bring 3 examples you like.
+3. Build a first draft of your web portfolio **using only HTML**.
 
 Classes
 =========
