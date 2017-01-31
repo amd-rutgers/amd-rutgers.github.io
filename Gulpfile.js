@@ -8,7 +8,6 @@ const source = require('vinyl-source-stream');
 const del = require('del');
 const run = require('run-sequence');
 const assign = require('node-assign');
-const Handlebars = require('handlebars');
 const autoprefixer = require('autoprefixer');
 
 // gulp plugins
@@ -22,13 +21,11 @@ const frontmatter = require('gulp-front-matter');
 const postcss = require('gulp-postcss');
 
 // metalsmith plugins
-const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const grep = require('metalsmith-grep');
 const permalinks = require('metalsmith-permalinks');
 const inPlace = require('metalsmith-in-place');
 
-const helpers = require('./helpers.js');
 const subs = [
   {
     search: /\/assets\//g,
@@ -45,10 +42,8 @@ function metalsmith() {
     timestamp: Date.now()
   })
   .use(grep({ subs: subs }))
-
   .use(inPlace({
     engineOptions: {
-      helpers: helpers,
       html: true,
       linkify: true,
       typographer: true
