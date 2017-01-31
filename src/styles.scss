@@ -135,9 +135,19 @@ table {
   }
 }
 
+
+
 img, iframe, video {
-    width: 100%;
-    min-height: 50vh;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  border: none;
+}
+
+iframe, video {
+  min-height: 50vh;
 }
 
 // 

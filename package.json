@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run build; gulp dev",
     "build": "gulp",
+    "assets": "gulp assets",
     "deploy-gh": "npm run build; gh-pages -d build",
     "deploy-dh": "npm run build; rsync -avz build/ -e ssh andydayton@andydayton.com:2b.andydayton.com/current/"
   },
