@@ -6,7 +6,9 @@ layout: index.html
 Next class
 ============
 
-1. Finish ["linked verse"](http://localhost:8080/classes/02/#linked-verse) poetry project
+[![UNDER CONSTRUCTION](/assets/underconstruction.gif)](http://www.business2community.com/social-buzz/make-fly-90s-website-geocities-tribute-01531323#qkPCcgO3s3rkLJQB.97)
+
+1. Finish ["linked verse"](http://localhost:8080/classes/02/#exercise-linked-verse) poetry project
 2. Research portfolio websites for inspiration, bring 3 examples you like.
 3. Build a first draft of your web portfolio **using only HTML**.
 
