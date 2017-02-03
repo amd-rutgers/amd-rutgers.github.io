@@ -1,6 +1,6 @@
 {
   "name": "rutgers-design2b-2017",
-  "version": "1.0.0",
+  "version": "1.2.3",
   "description": "Class site for Rugers Design II-B, Spring 2017",
   "main": "index.js",
   "scripts": {
