@@ -8,7 +8,7 @@
     "build": "gulp",
     "assets": "gulp assets",
     "deploy-gh": "npm run build; gh-pages -d build",
-    "deploy-dh": "npm run build; rsync -avz build/ -e ssh andydayton@christopher.dreamhos.com:2b.andydayton.com/current/"
+    "deploy-dh": "npm run build; rsync -avz build/ -e ssh andydayton@christopher.dreamhost.com:2b.andydayton.com/current/"
   },
   "repository": {
     "type": "git",
