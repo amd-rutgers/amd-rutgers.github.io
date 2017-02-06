@@ -22,7 +22,7 @@ Unit I: Online Publishing
 
 * [Week 01 - Introductions](classes/01/)
 * [Week 02 - Typography, Color, & The Box Model](classes/02/)
-* Week 03
+* [Week 03 - Portfolios, Organization, JavaScript](classes/03/)
 * Week 04
 * Week 05
 
