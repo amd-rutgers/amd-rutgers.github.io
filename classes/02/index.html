@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class 02 - Typography, Color, &amp; The Box Model</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css?1486391651258"></head>
+<body class="default-layout">
+  <header id="header">
+  	<h1 class="main-title"><a href="/"><span class="back">&#8672;</span>II&ndash;B</a></h1>
+  	<nav class="main-nav">
+  		<a href="#" class="main-nav-icon">&#x2257;</a>
+  		<ol class="main-nav-items">
+  		</ol>
+  	</nav>
+  </header>
+  <main id="main">
+  <p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/matrix.gif" alt="Whoa"></p>
+<p>There is no <code>&lt;spoon&gt;</code></p>
+<h1>Manovich &amp; new media</h1>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/manovich.jpg" alt="Lev Manovich"></p>
+<p>Discussing Manovich’s <a href="https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf"><em>The Language of New Media</em></a></p>
+<h2>Speed D.A.T.E -ing</h2>
+<p>Guidelines to fall back on for critique and discussion:</p>
+<ol>
+<li><strong>Describe</strong> what you’re experiencing</li>
+<li><strong>Analyze</strong> its construction and parts</li>
+<li><strong>Translate</strong> into impressions, emotions, ideas</li>
+<li><strong>Evaluate</strong> its effectiveness (on its own terms)</li>
+</ol>
+<p>It takes time to get to know any work well, but this can at least give us a good start!</p>
+<h1>Web typography</h1>
+<p><a href="https://giphy.com/gifs/keep-calm-and-type-on-typography-gif-qWnTbcUEMWO8o"><img src="https://s3.amazonaws.com/2b.andydayton.com/02/typography.gif" alt="TYPE ON"></a></p>
+<h2>Review</h2>
+<p>Let’s look at some code and try to figure out what it will look like:</p>
+<div class="code-columns">
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Bashō&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;pre&gt;
+Gladly will I sell
+For profit,
+   dear merchants of the town,
+My hat laden with snow
+&lt;/pre&gt;
+
+&lt;p&gt;—
+  &lt;a href=&quot;https://tinyurl.com/jpe7lp8&quot;&gt;
+    Matsuo Bashō
+  &lt;a&gt;
+&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-css">body {
+  background-color: snow;
+  color: lightsteelblue;
+  
+  font-family: &quot;Helvetica&quot;;
+  font-size: 35px;
+  
+  padding: 20%;
+}
+
+pre {
+  font-family: &quot;Georgia&quot;;
+  font-size: 150%;
+  margin: 0;
+}
+
+p {
+  text-align: right;
+}
+
+a {
+  color: lightslategray;
+  text-decoration: none;
+}
+
+</code></pre>
+</div>
+<p>What will this look like? <a href="/examples/basho/">Let’s see</a></p>
+<h2>Basic typo styles</h2>
+<p>A quick introduction to some CSS typography styles:</p>
+<hr>
+<h3><a href="http://www.w3schools.com/cssref/pr_font_font-family.asp"><code>font-family</code></a></h3>
+<pre><code class="language-css">font-family: &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif;
+</code></pre>
+<p><code>font-family</code> sets your typeface, and allows you to set some backup options. In the example above, the browser will:</p>
+<ol>
+<li>First try <code>Helvetica</code>,</li>
+<li>if that doesn’t work then <code>Arial</code>,</li>
+<li>otherwise use the default <code>sans-serif</code> font for the system.</li>
+</ol>
+<hr>
+<h3><a href="http://www.w3schools.com/cssref/pr_font_font-size.asp"><code>font-size</code></a></h3>
+<p><a href="http://designwithfontforge.com/en-US/The_EM_Square.html"><img src="http://designwithfontforge.com/en-US/images/baseline.png" alt="The EM square"></a></p>
+<p>We can use a variety of differnt sizing units for type size. Each of these settings will set the size of the typeface’s <a href="http://designwithfontforge.com/en-US/The_EM_Square.html">EM square</a>.</p>
+<p><strong>Note:</strong> all of these units work on other size-related css rules like <code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code>, etc.</p>
+<h4>pixels</h4>
+<pre><code class="language-css">font-size: 50px;
+</code></pre>
+<p>This one’s pretty easy — <code>px</code> just uses a pixel value to set the EM square size.</p>
+<h4>percentages</h4>
+<pre><code class="language-css">div { font-size: 16px; }
+p { font-size: 50%; }
+</code></pre>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;p&gt;This type will be 8px&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The percentage unit is less obvious — the <code>%</code> value is relative to the <code>font-size</code> of the parent container.</p>
+<p>So in the above example the <code>p</code> font size is <code>50%</code> of the <code>div</code> font size, which comes out at <code>8px</code>.</p>
+<h4>ems</h4>
+<pre><code class="language-css">body { font-size: 10px; }
+p { font-size: 1.4em; } /* =14px */
+</code></pre>
+<p>This is similar to the the percentage units, but initially the <code>em</code> size is relative to <code>body</code> element’s font-size (rather than the parant container).</p>
+<p>There are some gotchas here – mainly, the <code>em</code> size compounts gets multiplied in nested elements. <a href="https://css-tricks.com/why-ems/">More info here</a>.</p>
+<h4>rems</h4>
+<pre><code class="language-css">html { font-size: 10px; }
+/* p size = 14px no matter where it is! */
+p { font-size: 1.4rem; }
+</code></pre>
+<p>A recent solution to the issues with <code>em</code> is <code>rem</code>, or <a href="https://snook.ca/archives/html_and_css/font-size-with-rem">root em</a>. Basically, this is similar to <code>em</code> but <em>always</em> relative to the <code>&lt;html&gt;</code> Element.</p>
+<h4>viewport units</h4>
+<pre><code class="language-css">font-size: 50vh;
+font-size: 50vw;
+font-size: 50vmin;
+</code></pre>
+<p>Finally, <a href="https://css-tricks.com/viewport-sized-typography/">viewport units</a>! These are my favorite, and I used them excessively on this class site :).</p>
+<p>Basically viewport units are relative to the size of your browser window, on a range of <code>0-100</code> (so basically percentage points).</p>
+<ul>
+<li><code>vw</code> is relative to the browser width</li>
+<li><code>vh</code> is relative to the browser height</li>
+<li><code>vmin</code> is relative to the smallest of the two</li>
+</ul>
+<hr>
+<h3><a href="http://www.w3schools.com/cssref/pr_dim_line-height.asp"><code>line-height</code></a></h3>
+<pre><code class="language-css">line-height: 1.2em;
+</code></pre>
+<p><code>line-height</code> is essentially the web version of we call <a href="https://en.wikipedia.org/wiki/Leading">leading</a> in the rest of the typography world.</p>
+<hr>
+<h3><a href="http://www.w3schools.com/cssref/pr_text_letter-spacing.asp"><code>letter-spacing</code></a></h3>
+<p>Simarily, <code>letter-spacing</code> = <a href="https://en.wikipedia.org/wiki/Kerning">kerning</a>.</p>
+<hr>
+<h3>Google fonts!</h3>
+<p><a href="https://fonts.google.com/"><img src="https://s3.amazonaws.com/2b.andydayton.com/02/googlefonts.png" alt="Google Fonts"></a></p>
+<p>Web fonts used to suck, and we had to pick from a tiny list of options available on most computers. Not anymore! And Google has provided us with a <em>huge</em> collection of nice fonts to use in our projects. <a href="http://cssreset.com/how-to-use-google-fonts/">How to use Google fonts</a></p>
+<h3>Additional web type resources</h3>
+<ul>
+<li><a href="https://webdesign.tutsplus.com/series/a-z-of-web-typography--webdesign-11706">A-Z of web typography</a></li>
+<li><a href="https://robinrendle.com/essays/new-web-typography/">New Web Typography</a> – includes some in-depth historical context.</li>
+</ul>
+<h2>CSS Selectors</h2>
+<p>We already know that we can use the name of HTML tags to style elements in CSS. For instance, this will make the background of the <code>&lt;body&gt;</code> element yellow:</p>
+<pre><code class="language-css">body { background: yellow; }
+</code></pre>
+<p>We can also use <a href="http://www.w3schools.com/cssref/sel_class.asp"><em>classes</em></a> and <a href="http://www.w3schools.com/cssref/sel_id.asp"><em>ids</em></a>.</p>
+<p>There’s really only one difference between the two: <em>an <code>id</code> should only be used once on a page, but a <code>class</code> can be used as many times as you want</em>. For example:</p>
+<div class="code-columns">
+<pre><code class="language-html">&lt;h1 id=&quot;header&quot;&gt;Oh, hai&lt;/h1&gt;
+
+&lt;h1&gt;sup&lt;/h1&gt;
+
+&lt;p class=&quot;line&quot;&gt;Gladly will I sell&lt;/p&gt;
+&lt;p class=&quot;line&quot;&gt;For profit,dear merchants of the town,&lt;/p&gt;
+&lt;p class=&quot;line&quot;&gt;My hat laden with snow&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">#header {
+  color: blue;
+}
+.line {
+  color: red;
+}
+</code></pre>
+</div>
+<p>In this example, only the first <code>&lt;h1&gt;</code> element with the id of <code>header</code> will be colored blue, but all of the <code>&lt;p&gt;</code> elements with the <code>line</code> class will be colored red.</p>
+<p><a href="https://css-tricks.com/how-css-selectors-work/">Learn much more about CSS selectors here</a>.</p>
+<h1>Exercise: linked verse</h1>
+<p><a href="https://amd-rutgers.github.io/linked-verse/"><img src="https://s3.amazonaws.com/2b.andydayton.com/02/budo.png" alt="Budo"></a></p>
+<ol>
+<li><a href="https://github.com/amd-rutgers/linked-verse/archive/master.zip">Download starter project here</a></li>
+<li>Find a poem (try <a href="https://www.gutenberg.org/wiki/Poetry_%28Bookshelf%29">Project Gutenberg</a> or <a href="https://www.poetryfoundation.org/">Poetry Foundation</a>)</li>
+<li>Style it and play around with type (use <a href="https://amd-rutgers.github.io/linked-verse/">sample project</a> for reference)</li>
+</ol>
+<h1>Under the hood</h1>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/devtools.png" alt="Chrome Dev Tools"></p>
+<h2>Intro to Chrome Developer Tools</h2>
+<p>I found a handy little video here with an intro:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wcFnnxfA70g" frameborder="0" allowfullscreen></iframe>
+<p>Some other helpful links:</p>
+<ul>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a> – Google’s site about Chrome Developer Tools</li>
+<li><a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/html.css">Chrome/Safari (WebKit) default stylesheet</a> – this is where default styles in Chrome come from</li>
+</ul>
+<h2>Case studies</h2>
+<p><a href="http://joerperez.com"><img src="https://s3.amazonaws.com/2b.andydayton.com/02/joerperez.png" alt="Joe Perez"></a></p>
+<ul>
+<li><a href="https://css-tricks.com/all-about-floats/">CSS floats</a></li>
+</ul>
+<p><a href="http://hugoandmarie.com"><img src="https://s3.amazonaws.com/2b.andydayton.com/02/hugoandmarie.png" alt="Hugo and Marie"></a></p>
+<ul>
+<li><a href="https://www.html5rocks.com/en/tutorials/video/basics/">HTML5 Video</a></li>
+<li><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp">Media Queries</a></li>
+</ul>
+<h1>The box model &amp; color</h1>
+<p>Joseph Albers was an amazing artist &amp; educator, <a href="https://www.brainpickings.org/2013/08/16/interaction-of-color-josef-albers-50th-anniversary/">you can read more about him here</a>. Let’s use one of his paintings, <em>Homage to the Square: Soft Spoken</em>, as a learning tool:</p>
+<p><a href="http://www.metmuseum.org/toah/works-of-art/1972.40.7/"><img src="https://s3.amazonaws.com/2b.andydayton.com/02/albers1.jpg" alt="Homage to the Square: Soft Spoken (Albers)"></a></p>
+<ul>
+<li><a href="https://github.com/amd-rutgers/homage-to-the-square/blob/master/homage.zip?raw=true">Download the starter project here!</a></li>
+<li><a href="https://github.com/amd-rutgers/homage-to-the-square">View the step-by-step code here!</a></li>
+</ul>
+<h2>The Box Model</h2>
+<p>No, <em>not</em> this:
+<img src="https://s3.amazonaws.com/2b.andydayton.com/02/box-model1.gif" alt="Box Model?"></p>
+<p>This:
+<img src="https://s3.amazonaws.com/2b.andydayton.com/02/box-model2.png" alt="Box Model"></p>
+<h2>What is it?</h2>
+<p>The box model is one of the most elemental concepts used in HTML/CSS development. It’s made of the following parts (via <a href="http://www.w3schools.com/css/css_boxmodel.asp">w3schools</a>):</p>
+<ul>
+<li><strong>Content</strong> - The content of the box, where text and images appear</li>
+<li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+<li><strong>Border</strong> - A border that goes around the padding and content</li>
+<li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+</ul>
+<h2>The clock metaphor</h2>
+<p>You’ll often see box model styles with the following shorthand:</p>
+<pre><code class="language-css">margin: 12px 3px 6px 9px;
+</code></pre>
+<p>The best way to remember how this works is to think of a clock – the first value is the top (12:00), the second is the right (3:00), the third is the bottom (6:00) and the last is the left (9:00).</p>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/boxmodel.gif" alt="Dev Toolz"></p>
+<h2>Learn more</h2>
+<p>You can learn a bunch more about the box model at <a href="http://www.w3schools.com/css/css_boxmodel.asp">w3schools</a> and <a href="https://css-tricks.com/the-css-box-model/">CSS-tricks</a>, but maybe the best way to learn about the box model is to play around with it in Chrome Web Tools.</p>
+<h2>Color</h2>
+<p>What’s the smallest element of a digital on-screen image?</p>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/subpixel1.jpg" alt="Subpixel 1"></p>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/subpixel2.jpg" alt="Subpixel 2"></p>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/subpixel3.jpg" alt="Subpixel 3"></p>
+<p>You probably said “pixel.” Nope, introducing <a href="https://en.wikipedia.org/wiki/Subpixel_rendering">subpixels</a>.</p>
+<p>There are <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">many ways</a> of representing color in CSS:</p>
+<pre><code class="language-css">background-color: yellow;
+</code></pre>
+<p>Using <a href="https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/">named colors</a>.</p>
+<pre><code class="language-css">background-color: rgb(255, 255, 0);
+</code></pre>
+<p>Using RGB (red, green, blue) values (each is a value 0-255).</p>
+<pre><code class="language-css">background-color: #ffff00;
+</code></pre>
+<p>This pretty much the same as <code>rgb</code> but using <a href="http://www.codeconquest.com/hex-color-codes/">hexidecimal notation</a> as a shorthand.</p>
+<pre><code class="language-css">background-color: hsl(60%, 100%, 50%);
+</code></pre>
+<p>While most of the time color is represented in RGB values, we can also do <a href="http://www.w3schools.com/colors/colors_hsl.asp">HSL (hue, saturation, brightness)</a> representation (note that unlike RGB, <code>hsl</code> uses percentages).</p>
+<pre><code class="language-css">background-color: rgba(255, 255, 0, 0.5);
+</code></pre>
+<p>Finally we can include opacity, or <code>alpha</code> as it’s commonly called in the computer graphics world.</p>
+<p>There are many other color references on the web, <a href="http://sixrevisions.com/css/colors-webdesign/">this one</a> does a pretty good job of summing it up.</p>
+<h1>Exercise: recreating the past</h1>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/02/mondrian.jpg" alt="Composition II in Red, Blue, and Yellow"></p>
+<ol>
+<li>Duplicate your project folder from the last exersize to start a new project.</li>
+<li>Use HTML/CSS to recreate Mondrian’s painting <em>Composition II in Red, Blue, and Yellow</em> (above)</li>
+</ol>
+<h1>Next week</h1>
+<ol>
+<li>Finish <a href="/classes/02/#exercise-linked-verse">“linked verse”</a> poetry project</li>
+<li>Research portfolio websites for inspiration, bring 3 examples you like.</li>
+<li>Build a first draft of your web portfolio <strong>using only HTML</strong>. (We’ll move on the styling in class)</li>
+</ol>
+
+	</main>
+
+  <script type="text/javascript" src="/index.js?1486391651258"></script>
+</body>
+</html>

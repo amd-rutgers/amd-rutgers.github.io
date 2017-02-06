@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Class 01 - Introduction to web publishing</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css?1484976417619">
-    <link rel="stylesheet" type="text/css" href="/highlight/styles/dracula.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="/styles.css?1486391651258"></head>
 <body class="default-layout">
   <header id="header">
   	<h1 class="main-title"><a href="/"><span class="back">&#8672;</span>II&ndash;B</a></h1>
@@ -16,57 +14,167 @@
   	</nav>
   </header>
   <main id="main">
-  <h1 id="introductions">Introductions</h1>
-<h1 id="separation-of-form-content">Separation of form &amp; content</h1>
-<h1 id="hypertext-markup-and-the-www">Hypertext, markup, and the www</h1>
-<pre><code class="lang-c">#define Morse_h
-
-#include &quot;Arduino.h&quot;
-
-// classes should always be defined first!
-class Blinky {
-
-  unsigned long t;
-  unsigned long curTime;
-  int delayTimeOn;
-  int ledState;
-  int ledPin;
-
-  public:
-    Blinky(int pin, int timeOn) {
-      ledPin = pin;
-      delayTimeOn = timeOn;
-
-      pinMode(ledPin, OUTPUT);
-    }
-
-  void upd8() {
-    t = millis();
-
-
-    if(t - curTime &gt;= delayTimeOn) {
-      curTime = t;
-
-      if(ledState == LOW) {
-        digitalWrite(ledPin, HIGH);
-        ledState = HIGH;
-      } else {
-        digitalWrite(ledPin, LOW);
-        ledState = LOW;
-      }
-    } 
-
-  }
-};
-
-#endif
+  <p><img src="https://s3.amazonaws.com/2b.andydayton.com/01/hai.gif" alt="Hai"></p>
+<h1>Design II-B</h1>
+<p>This class is about many things.</p>
+<ul>
+<li>Learning to <strong>design systems</strong></li>
+<li>Learning how to <strong>translate your ideas</strong> to machines and other people</li>
+<li>Learning <strong>how to learn</strong> about your craft</li>
+<li><strong>Having fun</strong> while we’re doing it!</li>
+</ul>
+<p>Let’s have a look at <a href="https://docs.google.com/document/d/1cwxx9aWn1HdeqI9jF9a869dTQFoC5qtUhDZKN6fPz6c/edit?usp=drive_web">the syllabus</a>.</p>
+<h1>Some things about me</h1>
+<p>My name is Andy. I come from Minnesota. I’ve been doing this stuff for a while. I love to make things &amp; collaborate (lately with <a href="http://notioncollective.com/">The Notion Collective</a>). I’m looking forward to working with you.</p>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/me---you.jpg" alt="A line from me to you"></p>
+<ul>
+<li><a href="https://www.flickr.com/photos/amdayton/albums/1535190">Stairwell intervention</a></li>
+<li><a href="https://vimeo.com/59816748">Tate Fabrication presents IMPEL</a></li>
+<li><a href="http://museum.iamer.org">The Institute for the Advancement of Metatemporal Education and Research</a></li>
+<li><a href="http://hotairgame.com/">Hot Air</a></li>
+<li><a href="http://notioncollective.com/hri-unpaid-internship/">HRI (Unpaid Internship)</a></li>
+</ul>
+<h1>Inputs</h1>
+<p>Werner Herzog, <em>Low and Behold</em>
+<img src="https://s3.amazonaws.com/2b.andydayton.com/lo-and-behold.jpg" alt="Werner Herzog"></p>
+<p><a href="http://www.newrafael.com/">Rafaël Rozendaal</a>
+<a href="muchbetterthanthis.com"><img src="https://s3.amazonaws.com/2b.andydayton.com/01/rozendaal.png" alt="Rafaël Rozendaal, muchbetterthanthis.com"></a></p>
+<p><a href="http://gallery.art404.com/">art404, <em>Gallery404</em></a>
+<a href="http://gallery.art404.com/"><img src="https://s3.amazonaws.com/2b.andydayton.com/01/gallery404.png" alt="Gallery404"></a></p>
+<p><a href="http://disimages.com/">DIS Magazine, <em>DIS Images</em></a>
+<a href="http://disimages.com/"><img src="https://s3.amazonaws.com/2b.andydayton.com/01/disimages.png" alt="DIS Images"></a></p>
+<p><a href="http://nsahaiku.net/">Grayson Earle, <em>NSA Haiku Generator</em></a>
+<a href="http://nsahaiku.net/"><img src="https://s3.amazonaws.com/2b.andydayton.com/01/nsahaiku.png" alt="Grayson Earle, _NSA Haiku Generator"></a></p>
+<p><a href="http://yourworldoftext.com/">Andrew Badr, <em>Your World of Text</em></a>
+<img src="https://s3.amazonaws.com/2b.andydayton.com/01/yourworldoftext.png" alt="_Your World of Text"></p>
+<h1>The web as material</h1>
+<p>Let’s get started learning our craft.</p>
+<h2>Protocols</h2>
+<blockquote>
+<p>“I just had to take the hypertext idea and connect it to the TCP and DNS ideas and — ta-da! — the World Wide Web.”
+<cite>— Tim Berners-Lee</cite></p>
+</blockquote>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/01/protocol.gif" alt="protocol"></p>
+<p>Protocols are essentially sets of rules. In the case of web technology, they’re rules for communication between computers. They build on top of eacher to build the web.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> - Domain Name System. An address system for the Internet, that allows packets to find their way to the right place</li>
+<li><a href="https://en.wikipedia.org/wiki/Internet_protocol_suite">TCP/IP</a> - A protocols ensures that data “packets” get to their destination.</li>
+<li><a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> - Hyper-Text Transfer Protocol. The foundation of the www, rules for transfering web-based data.</li>
+<li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> — Hyper-Text Markup Language. Rules for how to structure hypertext data — in this case a language is just another kind of protocol.</li>
+</ul>
+<p><strong>Ta-da!</strong></p>
+<p><img src="https://s3.amazonaws.com/2b.andydayton.com/01/internet-map.jpg" alt="Map of the Internet"></p>
+<h2>Intro to HTML</h2>
+<p>For starters, HTML is made up of <em>tags</em>, which are keywords contained within the <code>&lt;</code> and <code>&gt;</code> characters (called “carats”). A few different styles of HTML tags:</p>
+<p>Standard opening opening and closing tags. For example, the text between <code>&lt;b&gt;</code> and <code>&lt;b&gt;</code> will be bolded:</p>
+<pre><code class="language-html">&lt;b&gt;WHY ARE YOU YELLING AT ME&lt;/b&gt;
 </code></pre>
-<p>Wait, but what happens if I use <code>console.log(&quot;inline code&quot;)</code>?</p>
-<h1 id="diving-in">Diving in</h1>
-<h1 id="assignments">Assignments</h1>
+<p>Standalone tags that don’t need to be closed. A line break:</p>
+<pre><code class="language-html">Gimme a&lt;br&gt;break
+</code></pre>
+<p>Or tags with <em>attributes</em> that add more info to the tag. A link uses the <code>href</code> attribute to indicate where it goes:</p>
+<pre><code class="language-html">&lt;a href=&quot;http://www.google.com&quot;&gt;Google it!&lt;/a&gt;
+</code></pre>
+<h3>Basic structure</h3>
+<p>The basic structure of a webpage consists of four tags: <code>html</code>, <code>head</code>, <code>body</code>, and the special <code>doctype</code> tag. The tinyest empty web page ever:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;head&gt;
+&lt;body&gt;&lt;body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>What do all of these do?</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+</code></pre>
+<p>Answers the questions: how should I interpret this doc? What language is it? And of course our answer is <code>html</code>.</p>
+<pre><code class="language-html">&lt;html&gt;&lt;/html&gt;
+</code></pre>
+<p>Not much goint on here really, except to say that everything in between these tags is HTML.</p>
+<pre><code class="language-html">&lt;head&gt;&lt;/head&gt;
+</code></pre>
+<p>Contains mostly <em>metadata</em>, stuff about the page but not necessarily what you see on the page. For example: page title, links to stylesheets, info for Google, Twitter, Facebook, etc. robots to find out more about the page.</p>
+<pre><code class="language-html">&lt;body&gt;&lt;body&gt;
+</code></pre>
+<p>This is the meat of the web page, where all the content is.</p>
+<p>There are a ton more tags for your HyperText Markup enjoyment! Here’s a list from w3schools:</p>
+<ul>
+<li><a href="http://www.w3schools.com/tags/">HTML Element Reference</a></li>
+</ul>
+<h2>Intro to CSS</h2>
+<p>CSS = Cascading Style Sheets. Basically, these tell the browser how your site should look.</p>
+<p>Anatomy of a css style:</p>
+<pre><code class="language-css">selector {
+  property: value;
+}
+</code></pre>
+<ul>
+<li><code>selector</code> is the part that tells you what part of the page to style. “That link over there!” or “All the headers on this page!”</li>
+<li><code>property</code> is the type of style to set. For instance: <code>color</code>, <code>font-family</code>, <code>margin</code>, etc.</li>
+<li><code>value</code> is the actual rule for that style. For <code>color</code> it might be <code>yellow</code>. For <code>font-family</code> it might be <code>Helvetica</code>.</li>
+<li>Also, don’t forget the <code>;</code> at the end!</li>
+</ul>
+<p>So let’s see some examples:</p>
+<h3>Selectors</h3>
+<p>To select everything between the <code>&lt;body&gt;&lt;/body&gt;</code> tags:</p>
+<pre><code class="language-css">body
+</code></pre>
+<p>To select all the header tags:</p>
+<pre><code class="language-css">h1, h2, h3, h4, h5
+</code></pre>
+<p>To select all images that are within paragraphs:</p>
+<pre><code class="language-css">p img
+</code></pre>
+<h3>Properties</h3>
+<p>Ugly red text:</p>
+<pre><code class="language-css">color: red;
+</code></pre>
+<p>Set the font to <code>Georgia</code>:</p>
+<pre><code class="language-css">font-family: &quot;Georgia&quot;;
+</code></pre>
+<p>Add a margin of 20 pixels on the left-hand side:</p>
+<pre><code class="language-css">margin-left: 20px;
+</code></pre>
+<p>And when we put them together in a stylesheet:</p>
+<pre><code class="language-css">
+body: {
+  color: red;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: &quot;Georgia&quot;;
+}
+
+p img {
+  margin-left: 20px;
+}
+
+</code></pre>
+<p>There are <strong>tons</strong> of CSS properties, there’s no way you could remember them all. w3schools has a reference for this too:</p>
+<ul>
+<li><a href="http://www.w3schools.com/cssref/">CSS Reference</a></li>
+</ul>
+<h1>Diving in</h1>
+<p>Next we’ll dive in and get started using HTML &amp; CSS.</p>
+<ol>
+<li>File systems</li>
+<li><a href="http://brackets.io">Brackets</a> text editor</li>
+<li>Setting up your <code>art.rutgers.edu</code> web space</li>
+<li>Creating a basic HTML page</li>
+</ol>
+<h1>For next week</h1>
+<pre>
+Soon we'll be coding
+The web and its protocols
+Don't forget to save
+</pre>
+<ul>
+<li>Read Lev Manovich, <a href="https://s3.amazonaws.com/2b.andydayton.com/the+language+of+the+new+media_manovich.pdf"><em>The Language of New Media</em></a> (pp. 43–66)</li>
+<li>Pick a favorite website to bring to class. We’ll open up the hood and see how it works.</li>
+<li>Select a poem to use when we continue with HTML/CSS next class. A good place to start: <a href="https://www.gutenberg.org/wiki/Poetry_%28Bookshelf%29">Poetry at Project Gutenberg</a>. Or write your own!</li>
+</ul>
 
 	</main>
 
-  <script type="text/javascript" src="/bundle.js?1484976417619"></script>
+  <script type="text/javascript" src="/index.js?1486391651258"></script>
 </body>
 </html>
