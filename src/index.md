@@ -6,11 +6,14 @@ layout: index.html
 Next class
 ============
 
-[![UNDER CONSTRUCTION](/assets/underconstruction.gif)](http://www.business2community.com/social-buzz/make-fly-90s-website-geocities-tribute-01531323#qkPCcgO3s3rkLJQB.97)
+![Work time!](/assets/03/work-chicken.gif)
 
-1. Finish ["linked verse"](/classes/02/#exercise-linked-verse) poetry project
-2. Research portfolio websites for inspiration, bring 3 examples you like.
-3. Build a first draft of your web portfolio **using only HTML**.
+ 1. First draft of your website
+ 2. Come with questions / requests
+ 3. Read [_Designing Programmes_](https://s3.amazonaws.com/2b.andydayton.com/Gerstner_Designing-Programmes.pdf) (Introduction by Paul Gredinger)
+
+
+
 
 Classes
 =========
