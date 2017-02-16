@@ -6,13 +6,12 @@ layout: index.html
 Next class
 ============
 
-![Work time!](/assets/03/work-chicken.gif)
+![Go!](/assets/04/nyan-bike.gif)
 
- 1. First draft of your website
- 2. Come with questions / requests
- 3. Read [_Designing Programmes_](https://s3.amazonaws.com/2b.andydayton.com/Gerstner_Designing-Programmes.pdf) (Introduction by Paul Gredinger)
-
-
+1. <del>Finish the "Big Button" exercise</del> _(will be due the following week)_
+2. <del>Add your other exercises to your portfolio</del> _(will be due the following week)_
+3. Finish your portfolios!
+4. Read [_Designing Programmes_](https://s3.amazonaws.com/2b.andydayton.com/Gerstner_Designing-Programmes.pdf) (if you didn't already)
 
 
 Classes
