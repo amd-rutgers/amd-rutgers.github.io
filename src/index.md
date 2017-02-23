@@ -6,13 +6,25 @@ layout: index.html
 Next class
 ============
 
-![Go!](/assets/04/nyan-bike.gif)
+<div style="float:left; margin-right: 5vw">
 
-1. <del>Finish the "Big Button" exercise</del> _(will be due the following week)_
-2. <del>Add your other exercises to your portfolio</del> _(will be due the following week)_
-3. Finish your portfolios!
-4. Read [_Designing Programmes_](https://s3.amazonaws.com/2b.andydayton.com/Gerstner_Designing-Programmes.pdf) (if you didn't already)
+![Vera Molnar](/assets/05/molnar.jpg)
 
+</div>
+
+<div>
+
+<blockquote>
+"In spite of their advantages, computers, no more than other simpler tools, do not guarantee that a work of art of good quality will result, for it is an artist's skill that is the decisive factor"
+
+<cite>—Vera Molnar</cite>
+</blockquote>
+
+1. Finish the ["Big Button"](/classes/04/#exercise-the-big-button) animation exercise
+2. Add your other exercises to your portfolio
+3. Read [_Toward Aesthetic Guidelines for Paintings with the Aid of a Computer_](https://s3.amazonaws.com/2b.andydayton.com/readings/molnar-aesthetic.pdf)
+
+</div>
 
 Classes
 =========
@@ -26,7 +38,7 @@ Unit I: Online Publishing
 * [Week 02 - Typography, Color, & The Box Model](classes/02/)
 * [Week 03 - Portfolios, Organization, JavaScript](classes/03/)
 * [Week 04 - JavaScript, Advanced CSS](classes/04/)
-* Week 05
+* Week 05 - Portfolio crits
 
 Unit II: Algorithmic Design
 ------------------------------
@@ -57,6 +69,7 @@ Theory & Philosophy
 * Douglas Rushkoff, [_Program or Be Programmed: Ten Commands for a Digital Age_](/assets/rushkoff-program-or-be-programmed.pdf)
 * Steven R. Holtzman, [_Digital Mantras: The Language of Abstract and Virtual Worlds_](https://www.goodreads.com/book/show/1485977.Digital_Mantras)
 * Alexander Galloway, [_Protocol_](https://mitpress.mit.edu/books/protocol)
+* Vera Molnar, [Toward Aesthetic Guidelines for Paintings with the Aid of a Computer](https://s3.amazonaws.com/2b.andydayton.com/readings/molnar-aesthetic.pdf)
 
 Design
 -------
