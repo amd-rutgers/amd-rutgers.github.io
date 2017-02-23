@@ -21,7 +21,7 @@ Next class
 </blockquote>
 
 1. Finish the ["Big Button"](/classes/04/#exercise-the-big-button) animation exercise
-2. Add your other exercises to your portfolio
+2. Add other exercises to your portfolio if you haven't already
 3. Read [_Toward Aesthetic Guidelines for Paintings with the Aid of a Computer_](https://s3.amazonaws.com/2b.andydayton.com/readings/molnar-aesthetic.pdf)
 
 </div>
