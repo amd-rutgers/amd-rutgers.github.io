@@ -3,29 +3,6 @@ title: II-B or not II-B
 layout: index.html
 ---
 
-Next class
-============
-
-<div style="float:left; margin-right: 5vw">
-
-![Vera Molnar](/assets/05/molnar.jpg)
-
-</div>
-
-<div>
-
-<blockquote>
-"In spite of their advantages, computers, no more than other simpler tools, do not guarantee that a work of art of good quality will result, for it is an artist's skill that is the decisive factor"
-
-<cite>—Vera Molnar</cite>
-</blockquote>
-
-1. Finish the ["Big Button"](/classes/04/#exercise-the-big-button) animation exercise
-2. Add other exercises to your portfolio if you haven't already
-3. Read [_Toward Aesthetic Guidelines for Paintings with the Aid of a Computer_](https://s3.amazonaws.com/2b.andydayton.com/readings/molnar-aesthetic.pdf)
-
-</div>
-
 Classes
 =========
 
@@ -125,18 +102,18 @@ Computer Lab
 Students
 ==========
 
-* Anne Ashby
+* [Anne Ashby](http://art.rutgers.edu/~ashby/)
 * Rosemary Desapio
-* Brian Gray
+* [Brian Gray](http://art.rutgers.edu/~gray/portfolio.html) ([sketches](https://www.openprocessing.org/user/80256/#sketches))
 * Kelly Hain
-* Steven Murdoch
-* Joel Novas
-* Sarah Pakay
-* Jonathan Parker
-* Melissa Perdomo
-* Michael Rexroad
-* Opinder Singh
-* Youli Yin
+* Steven Murdoch ([sketches](https://www.openprocessing.org/user/80255/#sketches))
+* [Joel Novas](http://art.rutgers.edu/~novas/) ([sketches](https://www.openprocessing.org/user/80249/#sketches))
+* [Sarah Pakay](http://art.rutgers.edu/~pakay/)
+* Jonathan Parker ([sketches](https://www.openprocessing.org/user/80254/#sketches))
+* [Melissa Perdomo](http://art.rutgers.edu/~perdomo/) ([sketches](https://www.openprocessing.org/user/80251/#sketches))
+* [Michael Rexroad](http://art.rutgers.edu/~rexroad/)
+* [Opinder Singh](http://art.rutgers.edu/~singh/) ([sketches](https://www.openprocessing.org/user/80250/#sketches))
+* [Youli Yin](http://art.rutgers.edu/~yin/)
 
 
 Class info
