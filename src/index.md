@@ -21,7 +21,7 @@ Unit II: Algorithmic Design
 ------------------------------
 
 * Week 06
-* Week 07
+* [Week 07 - Processing, Randomess, and PDFs](classes/07/)
 * Week 08
 * Week 09
 * Week 10
