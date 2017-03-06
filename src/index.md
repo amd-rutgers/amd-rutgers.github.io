@@ -105,7 +105,7 @@ Students
 * [Anne Ashby](http://art.rutgers.edu/~ashby/)
 * Rosemary Desapio
 * [Brian Gray](http://art.rutgers.edu/~gray/portfolio.html) ([sketches](https://www.openprocessing.org/user/80256/#sketches))
-* Kelly Hain
+* [Kelly Hain](http://art.rutgers.edu/~Hain/portfolio-draft.html)
 * Steven Murdoch ([sketches](https://www.openprocessing.org/user/80255/#sketches))
 * [Joel Novas](http://art.rutgers.edu/~novas/) ([sketches](https://www.openprocessing.org/user/80249/#sketches))
 * [Sarah Pakay](http://art.rutgers.edu/~pakay/)
