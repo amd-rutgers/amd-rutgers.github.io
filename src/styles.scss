@@ -11,10 +11,12 @@ $link-color: #007fff;
 $link-hover-color: #000;
 $link-visited-color: $link-color;
 
-$header-height: 16vmin;
+$header-height: 5rem;
 $side-margin: 5vw;
-$main-nav-font-size: $header-height;
-$title-font-size: 10vmin;
+$main-nav-font-size: 5rem;
+$title-font-size: 2rem;
+
+$bp-xl: 1024px;
 
 // 
 // basic element styles
@@ -27,6 +29,7 @@ $title-font-size: 10vmin;
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+	font-size: calc(100% + .75vw)
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -37,7 +40,7 @@ body {
 	padding: 0;
 	background: $bg-color;
 	font-family: $primary-font-family;
-	font-size: 3.5vmin;
+	font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -123,7 +126,7 @@ blockquote {
 }
 
 table {
-  font-size: 80%;
+  font-size: .8rem;
   
   tr {
     th, td {
@@ -184,6 +187,7 @@ iframe, video {
 		line-height: $header-height;
 
 		a {
+			font-size: 3rem;
 			font-weight: normal;
 			display: inline-block;
 		}
@@ -249,7 +253,7 @@ iframe, video {
 					border: 5px solid #fff;
 					color: #f0f;
 					display: block;
-					font-size: 4vh;
+					font-size: 2rem;
 
 					&:hover {
 						border-color: #f0f;
@@ -277,9 +281,10 @@ iframe, video {
 
 #main {
 	padding: $header-height $side-margin;
-
+	max-width: $bp-xl;
+	margin: 0 auto;
 	h1 {
-		font-size: 225%;
+		font-size: 2rem;
 		color: #f0f;
 		margin-top: $header-height * 3;
     }
@@ -289,15 +294,15 @@ iframe, video {
     }
     
     h2 {
-        font-size: 150%;
+        font-size: 1.5rem;
     }
   
     h3 {
-      font-size: 125%;
+      font-size: 1.25rem;
     }
   
     h4 {
-      font-size: 100%;  
+      font-size: 1rem;  
     }
     
     section.full-frame {
@@ -323,4 +328,8 @@ iframe, video {
       }
       
     }
+}
+
+@media screen and (min-width: $bp-xl) {
+	html { font-size: 150%; }
 }

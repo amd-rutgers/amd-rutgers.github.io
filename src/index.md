@@ -6,15 +6,13 @@ layout: index.html
 Next Class
 ===========
 
-<div style="width: 40vw; margin-right: 5vw; float: left;">
-<img src="/assets/07/unknown_pleasures.gif">
-<div style="font-size: 70%;"><em>GIF animation by <a href="http://alboardman.tumblr.com/" target="_blank">Al Boardman</a></em></div>
-</div>
+![Unknown Pleasures](/assets/07/unknown_pleasures.gif)
+
+_GIF animation by [Al Boardman](http://alboardman.tumblr.com/)_ 
 
 1. Finish your [Unknown Albums](https://github.com/amd-rutgers/unknown_albums) project. We'll print a few versions and discuss next class. You can use the projects in the "examples" section of the template or look for more in [album examples](https://github.com/amd-rutgers/album-examples). 
 2. For at least five days in a row, **pick one aspect of your life to track and record**.  Make sure you pick something that you can realistically collect data on, and be sure to document it well. See [_Dear Data_](https://www.goodreads.com/book/show/28465052-dear-data) for inspiration!
 
-<div style="clear:both;"></div>
 
 Classes
 =========
