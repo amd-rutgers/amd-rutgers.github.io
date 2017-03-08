@@ -28,12 +28,12 @@ Unit I: Online Publishing
 * [Week 02 - Typography, Color, & The Box Model](classes/02/)
 * [Week 03 - Portfolios, Organization, JavaScript](classes/03/)
 * [Week 04 - JavaScript, Advanced CSS](classes/04/)
-* Week 05 - Portfolio crits
+* Week 05 - Portfolio critiques
 
 Unit II: Algorithmic Design
 ------------------------------
 
-* Week 06
+* Week 06 - Procedural Drawing & p5.js
 * [Week 07 - Processing, Randomess, and PDFs](classes/07/)
 * Week 08
 * Week 09
@@ -133,9 +133,9 @@ Class info
 ===========
 
 **Design II-B**
-Rutgers University, Mason Gross School of the Arts
-Instructor: [Andy Dayton](andrew.dayton@rutgers.edu)
-Mondays, 9:50am – 4:10pm
-33 Livingston Ave. Room #224
+Rutgers University, Mason Gross School of the Arts<br>
+Instructor: [Andy Dayton](andrew.dayton@rutgers.edu)<br>
+Mondays, 9:50am – 4:10pm<br>
+33 Livingston Ave. Room #224<br>
 
  * [Class syllabus](https://docs.google.com/document/d/1cwxx9aWn1HdeqI9jF9a869dTQFoC5qtUhDZKN6fPz6c/edit?usp=drive_web)
