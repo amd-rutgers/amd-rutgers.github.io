@@ -33,7 +33,7 @@ Unit II: Algorithmic Design
 
 * Week 06 - Procedural Drawing & p5.js
 * [Week 07 - Processing, Randomess, and PDFs](classes/07/)
-* Week 08
+* [Week 08 - Drawing with Data](classes/08/)
 * Week 09
 * Week 10
 
