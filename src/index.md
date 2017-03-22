@@ -6,13 +6,17 @@ layout: index.html
 Next Class
 ===========
 
-![Unknown Pleasures](/assets/07/unknown_pleasures.gif)
+![Data](/assets/08/big_data.gif)
 
-_GIF animation by [Al Boardman](http://alboardman.tumblr.com/)_ 
+**First**, choose a data set to use for your next project. Please **let me know your choice by this friday** so that I can review and have pointers for you by next class. A few starting points for public data:
 
-1. Finish your [Unknown Albums](https://github.com/amd-rutgers/unknown_albums) project. We'll print a few versions and discuss next class. You can use the projects in the "examples" section of the template or look for more in [album examples](https://github.com/amd-rutgers/album-examples). 
-2. For at least five days in a row, **pick one aspect of your life to track and record**.  Make sure you pick something that you can realistically collect data on, and be sure to document it well. See [_Dear Data_](https://www.goodreads.com/book/show/28465052-dear-data) for inspiration!
+* [Awesome Public Datasets](https://github.com/caesar0301/awesome-public-datasets)
+* [data.gov](https://www.data.gov/)
 
+**Second**, Bring printed work to class! You should have ready to show:
+
+  1. Three prints of your album cover design (4.5in x 4.5in)
+  2. One print of your data drawing exercise from class Monday (10in on shortest side)
 
 Classes
 =========
