@@ -6,17 +6,6 @@ layout: index.html
 Next Class
 ===========
 
-![Data](/assets/08/big_data.gif)
-
-**First**, choose a data set to use for your next project. Please **let me know your choice by this friday** so that I can review and have pointers for you by next class. A few starting points for public data:
-
-* [Awesome Public Datasets](https://github.com/caesar0301/awesome-public-datasets)
-* [data.gov](https://www.data.gov/)
-
-**Second**, Bring printed work to class! You should have ready to show:
-
-  1. Three prints of your album cover design (4.5in x 4.5in)
-  2. One print of your data drawing exercise from class Monday (10in on shortest side)
 
 Classes
 =========
@@ -39,7 +28,7 @@ Unit II: Algorithmic Design
 * [Week 07 - Processing, Randomess, and PDFs](classes/07/)
 * [Week 08 - Drawing with Data](classes/08/)
 * Week 09
-* Week 10
+* [Week 10 - Motion & Interactivity](classes/10/)
 
 Unit III: Physical Interaction with Digital Interfaces
 -----------------------------------------------------
